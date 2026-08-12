@@ -81,6 +81,39 @@ h1 {
   color: var(--muted);
 }
 
+.field-label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.number-input {
+  width: 130px;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-alt);
+  color: var(--text);
+  font: inherit;
+}
+
+.download-button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--good);
+  color: #06111d;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.download-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .summary-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 1fr));

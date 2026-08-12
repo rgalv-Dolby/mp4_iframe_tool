@@ -19,6 +19,10 @@
         <label for="file-input" class="upload-label">Choose MP4</label>
         <input id="file-input" type="file" accept="video/mp4,.mp4" />
         <p id="file-name" class="file-name">No file selected</p>
+        <label for="video-frame-rate" class="field-label">Video frame rate (from MP4)</label>
+        <input id="video-frame-rate" class="number-input" type="text" value="Not detected" readonly />
+        <button id="download-match-set" class="download-button" type="button" disabled>Download full match CSV</button>
+        <button id="download-ac4-locations" class="download-button" type="button" disabled>Download AC-4 locations CSV</button>
       </section>
 
       <section class="panel summary-panel">
@@ -46,7 +50,7 @@
       </section>
 
       <section class="panel table-panel">
-        <h2>Detected sync samples / I-frames</h2>
+        <h2>Detected sync samples / I-frames and AC-4 matches</h2>
         <div class="table-wrap">
           <table>
             <thead>
@@ -54,12 +58,14 @@
                 <th>#</th>
                 <th>Sample number</th>
                 <th>Delta from prev.</th>
-                <th>Notes</th>
+                <th>AC-4 frame</th>
+                <th>AC-4 sample</th>
+                <th>Match error (samples)</th>
               </tr>
             </thead>
             <tbody id="iframe-table-body">
               <tr>
-                <td colspan="4" class="empty">Waiting for MP4 upload</td>
+                <td colspan="6" class="empty">Waiting for MP4 upload</td>
               </tr>
             </tbody>
           </table>
