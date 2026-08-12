@@ -54,7 +54,7 @@ function setLoadingState(message) {
 function renderAnalysis(analysis) {
   const totalSamples = analysis.samples.length;
   sampleCount.textContent = String(totalSamples);
-  intervalValue.textContent = analysis.interval === null ? 'N/A' : `${analysis.interval} samples`;
+  intervalValue.textContent = analysis.interval === null ? 'N/A' : `${analysis.interval} frames`;
   variabilityValue.textContent = analysis.isConstant ? 'Constant' : 'Variable';
 
   if (analysis.isConstant && analysis.interval !== null) {
@@ -67,7 +67,7 @@ function renderAnalysis(analysis) {
     statusBadge.classList.add('warn');
   }
 
-  resultSummary.textContent = `${analysis.raw}. AC-4 matches use 2048 samples at 48 kHz and the nearest native frame boundary.`;
+  resultSummary.textContent = `${analysis.raw}. AC-4 matches use 2048 audio samples at 48 kHz and the nearest native frame boundary.`;
   renderRows(analysis.samples, analysis.intervals, currentMatches);
 }
 
@@ -105,7 +105,7 @@ fileInput.addEventListener('change', async (event) => {
   }
 
   fileName.textContent = file.name;
-  setLoadingState(`Reading ${file.name}...`);
+  setLoadingState('Reading file...');
 
   try {
     const bytes = await file.arrayBuffer();

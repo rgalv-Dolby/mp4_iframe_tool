@@ -208,7 +208,7 @@ export function analyseSyncSampleIntervals(samples) {
     interval,
     isConstant,
     raw: isConstant && interval !== null
-      ? `Constant i-frame interval of ${interval} samples`
+      ? `Constant i-frame interval of ${interval} frames`
       : intervals.length > 0
         ? `Variable i-frame interval detected (${intervals.join(', ')})`
         : 'No interval data',
