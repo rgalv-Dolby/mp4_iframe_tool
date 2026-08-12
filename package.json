@@ -1,0 +1,10 @@
+{
+  "name": "mp4-iframe-viewer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 4173",
+    "test": "node --test"
+  }
+}
